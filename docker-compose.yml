@@ -1,0 +1,22 @@
+services:
+  utilisateurs:
+    build: ./ms-utilisateurs
+    ports:
+      - "4002:3000"
+    networks:
+      - ms-network
+    volumes:
+      - ./ms-utilisateurs/utilisateurs.json:/app/utilisateurs.json
+
+  livres:
+    build: ./ms-livres
+    ports:
+      - "4003:3000"
+    networks:
+      - ms-network
+    volumes:
+      - ./ms-livres/livres.json:/app/livres.json
+
+networks:
+  ms-network:
+    driver: bridge

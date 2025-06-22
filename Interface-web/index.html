@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bibliothèque - MS - Omnia Omnibus</title>
+  <meta name="author" content="Blaise Kabambu et ali">
+  <meta name="description" content="CRUD de livres et utilisateurs avec microservices">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h2 { margin-top: 40px; }
+    .section { margin-bottom: 40px; 
+    border-top: 1px solid #ccc; padding-top: 20px; }
+    input, button { margin: 5px 0; padding: 8px; }
+    textarea { width: 100%; height: 100px; }
+    ul { padding-left: 20px; }
+    button {
+       background-color: rgb(70, 93, 207);
+       border-radius: 5px 5px 5px 5px;
+       cursor: pointer;
+    }
+    button:hover {
+       background-color: rgb(50, 70, 150);
+       color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bibliothèque MS - Omnia Omnibus</h1>
+  <div class="section">
+    <h2>📘 Livres</h2>
+    <button onclick="getLivres()">Afficher les livres</button>
+    <ul id="livresList"></ul>
+    <h3>Ajouter un livre</h3>
+    <input type="text" id="titre" placeholder="Titre" /><br />
+    <input type="text" id="auteur" placeholder="Auteur" /><br />
+    <!--<input type="date" id="annee" placeholder="Année" /><br />-->
+    <button onclick="ajouterLivre()">Ajouter</button>
+  </div>
+
+  <div class="section">
+    <h2>👤 Utilisateurs</h2>
+    <button onclick="getUtilisateurs()">Afficher les utilisateurs</button>
+    <ul id="utilisateursList"></ul>
+    <h3>Ajouter un utilisateur</h3>
+    <input type="text" id="nom" placeholder="Nom" /><br />
+    <input type="text" id="prenom" placeholder="Prénom" /><br />
+    <input type="email" id="email" placeholder="Email" /><br />
+    <button onclick="ajouterUtilisateur()">Ajouter</button>
+  </div>
+  <script>
+    // Initialisation des données et affichage des livres
+    async function getLivres() {
+      const res = await fetch("http://localhost:4003/livres");
+      const livres = await res.json();
+      const ul = document.getElementById("livresList");
+      ul.innerHTML = "";
+      livres.forEach(l => {
+        ul.innerHTML += `<li><strong>${l.titre}</strong> - ${l.auteur}</li>`;
+      });
+    }
+    // Fonction pour ajouter un livre
+    // Utilisation de fetch pour envoyer une requête POST à l'API
+    async function ajouterLivre() {
+      const data = {
+        titre: document.getElementById("titre").value,
+        auteur: document.getElementById("auteur").value,
+      };
+      await fetch("http://localhost:4003/livres", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      getLivres();
+    }
+    // Fonction pour récupérer et afficher les utilisateurs
+    // Utilisation de fetch pour envoyer une requête GET à l'API
+    async function getUtilisateurs() {
+      const res = await fetch("http://localhost:4002/utilisateurs");
+      const users = await res.json();
+      const ul = document.getElementById("utilisateursList");
+      ul.innerHTML = "";
+      users.forEach(u => {
+        ul.innerHTML += `<li><strong>${u.nom} ${u.prenom}</strong> - ${u.email}</li>`;
+      });
+    }
+    // Fonction pour ajouter un utilisateur
+    // Utilisation de fetch pour envoyer une requête POST à l'API
+    async function ajouterUtilisateur() {
+      const data = {
+        nom: document.getElementById("nom").value,
+        prenom: document.getElementById("prenom").value,
+        email: document.getElementById("email").value
+      };
+      await fetch("http://localhost:4002/utilisateurs", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      getUtilisateurs();
+    }
+  </script>
+</body>
+</html>

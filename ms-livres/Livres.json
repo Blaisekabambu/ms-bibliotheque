@@ -1,0 +1,85 @@
+[
+  {
+    "id": 1,
+    "titre": "Bible",
+    "auteur": "Dieu",
+    "utiisateurId": 1
+  },
+  {
+    "id": 2,
+    "titre": "Terre des hommes",
+    "auteur": "Antoine de Saint-Exupery",
+    "utiisateurId": 1
+  },
+  {
+    "id": 3,
+    "titre": "Alice au pays des merveilles",
+    "auteur": "Lewis Carrol",
+    "utiisateurId": 1
+  },
+  {
+    "id": 4,
+    "titre": "Se marier  à  tous prix",
+    "auteur": "Garry Cahpman",
+    "utilisateurId": 2
+  },
+  {
+    "id": 5,
+    "titre": "Savoir se vendre",
+    "auteur": "Inconnu",
+    "utilisateurId": 2
+  },
+  {
+    "id": 6,
+    "titre": "Investir en RDC, terre des affaires",
+    "auteur": "Gode Mpoyi",
+    "utilisateurId": 3
+  },
+  {
+    "id": 7,
+    "titre": "Le calme après la tempête",
+    "auteur": "Blaise Kabambu",
+    "utilisateurId": 1
+  },
+  {
+    "id": 8,
+    "titre": "Jeunesse pour Christ",
+    "auteur": "Blaise Kabambu",
+    "utilisateurId": 1
+  },
+  {
+    "id": 9,
+    "titre": "Se taire ou parler",
+    "auteur": "Blaise Kabambu",
+    "utilisateurId": 1
+  },
+  {
+    "id": 10,
+    "titre": "Ce que j'ai voulu savoir avant de ma marier",
+    "utilisateurId": null
+  },
+  {
+    "id": 11,
+    "titre": "Viens et",
+    "auteur": "Jigi jagard",
+    "utilisateurId": null
+  },
+  {
+    "id": 12,
+    "titre": "Le calme après la tempète",
+    "auteur": "Blaise Kabambu",
+    "utilisateurId": null
+  },
+  {
+    "id": 13,
+    "titre": "Terre des hommes",
+    "auteur": "Antoine de Saint-Exupery",
+    "utilisateurId": null
+  },
+  {
+    "id": 14,
+    "titre": "Vis la vie",
+    "auteur": "Eric Lukengo",
+    "utilisateurId": null
+  }
+]
