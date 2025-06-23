@@ -17,6 +17,13 @@ services:
     volumes:
       - ./ms-livres/livres.json:/app/livres.json
 
+  interface:
+    build: ./interface-web
+    ports:
+      - "4000:80"
+    networks:
+      - ms-network
+
 networks:
   ms-network:
     driver: bridge

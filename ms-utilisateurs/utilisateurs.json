@@ -35,5 +35,29 @@
     "nom": "SOW",
     "prenom": "KADIATOU",
     "email": "Facturation.k@cmd.cd"
+  },
+  {
+    "id": 8,
+    "nom": "Masolokele",
+    "prenom": "Gaelle",
+    "email": "gaelmasolokele@gmail.com"
+  },
+  {
+    "id": 9,
+    "nom": "Patrick",
+    "prenom": "Mukeba",
+    "email": "patrickmukeba@gmail.com"
+  },
+  {
+    "id": 10,
+    "nom": "Shako",
+    "prenom": "Charly",
+    "email": "charlyohembe@nexel.com"
+  },
+  {
+    "id": 11,
+    "nom": "Ntonto",
+    "prenom": "José",
+    "email": "Josentontoexel.com"
   }
 ]

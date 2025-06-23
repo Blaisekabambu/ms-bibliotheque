@@ -1,0 +1,11 @@
+# Utiliser une image de serveur web léger
+FROM nginx:alpine
+
+# Suppression la page d'accueil par défaut de Nginx - Blaise K
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copie de HTML dans le dossier web de Nginx
+COPY . /usr/share/nginx/html
+
+# Exposer le port 80
+EXPOSE 80
