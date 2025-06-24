@@ -1,6 +1,6 @@
 # 📚 Projet de microservices - Bibliothèque
 
-Développé par **les étudiants L1 M1 Informatique, année 2024-2025**
+Développé par **les étudiants L1 M1 Informatique (Blaise Kabambu, Gaelle Masolokele, Patrick Mukeba, José Ntono, Charly Shako) année 2024-2025**
 
 Ce projet contient 2 microservices (`livres` et `utilisateurs`) et une interface web, tous conteneurisés avec Docker.
 
@@ -75,7 +75,7 @@ Livres – sur http://localhost:4003/livres
 Utilisateurs – sur http://localhost:4002/utilisateurs
 
 Contact: 
-Si vous avez des questions, appeler au 081 94 41 102
+Si vous avez des questions, appeler au 081 94 41 102 (Blaise Kabambu, chef de groupe)
 
 Kinshasa, le 23/06/2025
 
