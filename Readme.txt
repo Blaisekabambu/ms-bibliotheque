@@ -67,6 +67,7 @@ Docker compose down
 Bonus
 
 Tester les microservices avec Thunder Client
+
 Vous pouvez également utiliser Thunder Client (extension VS Code) ou Postman pour interagir directement avec les microservices.
 
 Voici les principales requêtes possibles : Get, Post, Put, Delete (CRUD)
