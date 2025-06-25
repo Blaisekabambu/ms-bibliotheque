@@ -1,5 +1,9 @@
 # 📚 Projet de microservices - Bibliothèque
 
+Dans le cadre d'un travail académique, il nous a été demandé de mettre en place une application distribuée d'une bibiliothèque, qui a deux microservices (livre et utilisateurs). Les deux microserviecsn doivent communiquer via une API REST avec posibilité d'utiliser le CRUD (Create, read, updat etd elete) sur chaque microservice. 
+
+Outils utilisés: Dokcer, node.js, js, html,css, bootsrap, etc.
+
 Développé par **les étudiants L1 M1 Informatique (Blaise Kabambu, Gaelle Masolokele, Patrick Mukeba, José Ntono, Charly Shako) année 2024-2025**
 
 Ce projet contient 2 microservices (`livres` et `utilisateurs`) et une interface web, tous conteneurisés avec Docker.
@@ -15,7 +19,7 @@ Ce projet contient 2 microservices (`livres` et `utilisateurs`) et une interface
 
 ## 🚀 Lancer l'application
 
-Dans un terminal, placer-vous dans le dossier `Ms-bibliotheque` (là où se trouve le fichier `docker-compose.yml`) puis exécutez :
+Dans un terminal, placez-vous dans le dossier `Ms-bibliotheque` (là où se trouve le fichier `docker-compose.yml`) puis exécutez :
 
 Terminal
 docker compose up --build
